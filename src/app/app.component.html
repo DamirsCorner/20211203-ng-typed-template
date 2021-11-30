@@ -10,5 +10,7 @@
 </ng-container>
 
 <ng-template #itemTemplate let-item="ctxItem">
-  <div>{{ item.id }}: {{ item.label }}</div>
+  <ng-container *ngIf="toItem(item); let item">
+    <div>{{ item.id }}: {{ item.label }}</div>
+  </ng-container>
 </ng-template>

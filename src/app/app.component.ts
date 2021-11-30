@@ -20,4 +20,8 @@ export class AppComponent {
     id,
     label: `Bottom ${id}`,
   }));
+
+  toItem(item: Item): Item {
+    return item;
+  }
 }
