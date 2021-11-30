@@ -1,10 +1,23 @@
 import { Component } from '@angular/core';
 
+interface Item {
+  id: number;
+  label: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'ng-typed-template';
+  topItems: Item[] = Array.from({ length: 5 }, (_, id) => ({
+    id,
+    label: `Top ${id}`,
+  }));
+
+  bottomItems: Item[] = Array.from({ length: 5 }, (_, id) => ({
+    id,
+    label: `Bottom ${id}`,
+  }));
 }
